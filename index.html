@@ -17,7 +17,8 @@
   <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
+    type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
   <!-- Custom styles for this template -->
@@ -29,12 +30,38 @@
   <div class="offcanvas-btn" onclick="openCanvas()">
     <i class="fa fa-comment" aria-hidden="true"></i>
   </div>
-  <aside class="offcanvas-aside">
-    <a href="./projects/touchTheNums/index.html">Click me</a>
+  <aside class="offcanvas-aside justify-content-center align-items-start p-1 bg-dark">
+    <h4>Contact Me 📩</h4>
     <!-- Contact -->
-    <section>
-      <h4>Contact Me</h4>
-    </section>
+   <form  id="contact-form">
+
+       <label for="email" class="form-label text-primary">Email address</label>
+       <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+       <div id="emailHelp" class="form-text text-secondary badge">We'll never share your email with anyone else.</div>
+
+ 
+        <label for="subject" class="form-text text-primary">Subject</label>
+        <input type="text" class="form-control" id="subject">
+
+ 
+        <label for="body" class="form-text text-primary">Message Body</label>
+        <textarea id="body" rows="4" cols="50"></textarea>
+
+        <button type="button" class="btn btn-primary">Submit</button>
+    </form> 
+      
+    <!-- <section>
+      <form class="d-flex flex-column flex-align-start">
+        <label for="email">Your E-Mail</label>
+        <input type="mail" name="email" />
+
+        <label for="subject">Subject</label>
+        <input type="text" name="subject" />
+
+
+        <button class="btn btn-secondary" type="button">Submit</button>
+      </form>
+    </section> -->
 
   </aside>
 
@@ -42,7 +69,9 @@
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">Meet Me</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
         <i class="fa fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -163,7 +192,8 @@
         </div>
       </div>
       <div class="col-sm-8 flex-align-center">
-        <p class="large text-muted  about-description">Born and raised in Haifa, Fan of Maccabi, I am currently learning how to become a fullStack developer
+        <p class="large text-muted  about-description">Born and raised in Haifa, Fan of Maccabi, I am currently learning
+          how to become a fullStack developer
           and how to make your ambitious wishes come true and look fabulous!
         </p>
       </div>
@@ -212,9 +242,7 @@
     </div>
   </footer>
 
-  <!-- Portfolio Modals -->
-
-  <!-- Modal -->
+  <!-- Portfolio Modal -->
   <div class="portfolio-modal modal fade" id="portfolioModal" tabindex="-1" role="dialog" aria-hidden="true">
   </div>
 

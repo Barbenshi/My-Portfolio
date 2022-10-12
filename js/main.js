@@ -6,6 +6,8 @@ function init() {
     console.log('Starting up');
     createProjs()
     renderPortfolio()
+    $('#contact-form button').click(onSubmit)
+    console.log($('#contact-form'));
 }
 
 function renderPortfolio() {
@@ -76,4 +78,13 @@ function renderModal() {
 </div>
 `
     $('#portfolioModal').html(strHtml)
+}
+
+function onSubmit(ev) {
+    const email = $('#email').val()
+    const subject = $('#subject').val()
+    const body = $('#body').val()
+
+    const url = `https://mail.google.com/mail/?view=cm&fs=1&to=barbenshimol2@gmail.com&su=${subject}&body=${email}, ${body}`
+    window.open(url, '_blank')
 }
