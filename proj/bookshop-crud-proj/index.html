@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Shop</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Permanent+Marker&family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+</head>
+
+<body onload="onInit()">
+    <div class="flash-modal hide">Book <span></span> successfully</div>
+    <h1>Welcome to my Book Shop</h1>
+    <section class="filter">
+
+        <select onchange="onSetSort({[this.value]:this.value})">
+            <option value="">Sort By</option>
+            <option value="descending-price">Max Price</option>
+            <option value="rating">Minimum Rating</option>
+        </select>
+
+        <input oninput="onSetFilter(type,this.value)" type="text" placeholder="Search book here" />
+    </section>
+
+    <button onclick="onAddBookModal()">Add Book</button>
+    <div class="layout-btns">
+        <button onclick="onLayout('table')">⌂</button>
+        <button onclick="onLayout('cards')">⁘</button>
+    </div>
+
+    <div class="paging-buttons">
+        <button onclick="onUpdatePage(-1)" class="prev">&lt</button>
+        <span></span>
+        <button onclick="onUpdatePage(1)" class="next">&gt</button>
+    </div>
+    
+    <section class="details-modal">
+    </section>
+    <section class="books-container">
+        <table border="1">
+            <thead>
+                <th>ID</th>
+                <th><select onchange="onSetSort({'name':this.value})" name="sort">
+                        <option value="">Title</option>
+                        <option value="name">Ascending Order</option>
+                        <option value="descending-name">Descending Order</option>
+                    </select></th>
+                <th><select onchange="onSetSort({'price':this.value})" name="sort">
+                        <option value="">Price</option>
+                        <option value="price">Show Low Price First</option>
+                        <option value="descending-price">Show Hight Price First</option>
+                    </select></th>
+                <th colspan="3">Actions</th>
+            </thead>
+
+            <tbody>
+            </tbody>
+        </table>
+    </section>
+    <section class="books-cards-container">
+    </section>
+
+
+
+    <script src="js/services/util.service.js"></script>
+    <script src="js/services/storage.service.js"></script>
+    <script src="js/services/books-service.service.js"></script>
+    <script src="js/books-controller.js"></script>
+</body>
+
+</html>

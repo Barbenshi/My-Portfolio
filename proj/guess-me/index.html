@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Guess-Me</title>
+    <!-- <link rel="stylesheet" href="css/app.css" /> -->
+    <link rel="stylesheet" href="lib/bootstrap/bootstrap.css" />
+  </head>
+
+  <body>
+    <div class="container bg-info text-center p-0">
+
+    
+    <header style="height:400px">
+      <img src="img/layout/logo.png" />
+      <h1 class="mt-5 text-secondary">Guess Who</h1>
+    </header>
+
+    <div class="modal" tabindex="-1" id="win-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text">Victorious!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>I made it correctly anoter time!</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Test me again</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <main class="bg-warning">
+      <section class="game-start">
+        <h2>Think of Someone...</h2>
+        <button class="btn btn-start btn-primary mb-1">I'm Ready!</button>
+      </section>
+
+      <section class="quest" style="display: none">
+        <h2></h2>
+        <button class="btn btn-yes btn-success m-1">Yes</button>
+        <button class="btn btn-no btn-danger m-1">No</button>
+      </section>
+
+      <section class="new-quest" style="display: none">
+        <h2>OK, I gave up...</h2>
+
+        <form class="ending-form d-flex flex-column justify-content-evenly align-items-center">
+          <label for="newGuess">You thought of: </label>
+          <input name="newGuess" type="txt" id="newGuess" placeholder="Your Guess" required />
+
+          <label for="newQuest">Question to differentiate:</label>
+          <input name="newQuest" type="txt" id="newQuest" placeholder="The answer is YES for yours" required />
+
+          <button type="submit" class="btn btn-add-guess btn-primary m-1">Make me Smarter!</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="bg-dark text-light">CoffeRights &copy; 2021</footer>
+  </div>
+    <script src="lib/bootstrap/bootstrap.bundel.js"></script>
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="js/services/storage.service.js"></script>
+    <script src="js/services/quest.service.js"></script>
+    <script src="js/quest.controller.js"></script>
+  </body>
+</html>

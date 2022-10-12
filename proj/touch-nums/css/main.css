@@ -1,0 +1,64 @@
+body{
+    background-image: url('/img/game-bg.jpg');
+    background-size: cover;
+}
+
+
+table {
+    margin: auto;
+    border: 5px solid #1B4079;
+    background-color: #FF8C42
+}
+.header{
+    width: 700px;
+    margin:auto;
+    text-align: center;
+}
+
+.table-body {
+    text-align: center;
+    font-size: 40px;
+    
+}
+
+td:hover {
+    background-color: rgb(199, 222, 222);
+    cursor: pointer;
+}
+
+.time {
+    background-color: aqua;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    display: inline
+}
+
+.hide {
+    display: none
+}
+
+.curr-num {
+    background-color: rgb(74, 114, 150);
+    display: inline;
+    margin:20px;
+    font-size:30px;
+
+}
+
+
+button {
+    border: 2px solid lightblue;
+    border-radius: 4px;
+    margin: 5px;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #BD9391;
+}
+
+.button {
+    text-align: center;
+    margin: 10 auto;
+}

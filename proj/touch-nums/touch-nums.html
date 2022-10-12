@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body onload="initGame()">
+    <h1></h1>
+    <div class="header">
+        <div class="time hide">
+            Time Passed:
+        </div>
+    
+        <div class="curr-num">
+            HIT ME!: 1
+        </div>
+    </div>
+
+    <div class="button">
+        <button class="diff" onclick="chooseDifficulty(16)">Easy</button>
+        <button class="diff" onclick="chooseDifficulty(25)">Medium</button>
+        <button class="diff" onclick="chooseDifficulty(36)">Hard</button>
+    </div>
+
+    <table border="4" cellpadding="10">
+        <tbody class="table-body">
+            <!-- <tr><td>Hi</td></tr> -->
+        </tbody>
+    </table>
+
+    <div class="button">
+        <button class="button hide restart-button" onclick="restartGame(this)">Restart Game</button>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/util.js"></script>
+</body>
+
+</html>

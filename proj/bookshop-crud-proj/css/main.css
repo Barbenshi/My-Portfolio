@@ -1,0 +1,237 @@
+@import url('mobile.css');
+
+*{
+    box-sizing: border-box;
+}
+
+
+
+html,body{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+    background-color: slateblue;
+    overflow-x: hidden;
+    color: bisque;
+    font-family: 'Permanent Marker', cursive;
+    height: 100vh;
+    width: 100vw;
+}
+
+h1{
+    text-shadow: 5px 5px 10px #632323;
+}
+
+.flash-modal{
+    align-self: flex-start;
+    background-color: black;
+}
+
+select,option,button{
+    padding: 3px 8px;
+    margin: 2px;
+    border: 0;
+    border-radius: .2em;
+    cursor: pointer;
+    background-color: darkmagenta;
+    color: lightpink;
+    font-family: 'Rubik Moonrocks', cursive;
+
+}
+
+button:disabled{
+    opacity: 0.3;
+    cursor:not-allowed;
+}
+
+.books-container{
+    min-height: 300px;
+}
+
+.books-cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    min-height: 500px;
+    /* margin-right: 450px; */
+}
+
+@keyframes myAnim {
+	0%,100% {
+		transform: scaleX(1);
+	}
+
+	50%{
+		transform: scaleX(0);
+	}
+}
+
+.book{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+    height: min-content;
+    width: min-content;
+    margin: 50px;
+    background-color: black;
+    border-radius: 0.2em;
+    opacity: 0.5;
+    transition: all 0.5s ease;
+    box-shadow: 5px 5px 10px 1px #000;
+    animation: myAnim 5s ease-in-out 0s infinite alternate forwards;
+
+}
+
+.book button{
+    margin-bottom: 0;
+}
+
+.book:hover{
+    opacity: 1;
+    animation: none;
+}
+
+button:hover{
+    color:deeppink;
+}
+
+button.read{
+    background-color: lightseagreen;
+}
+button.update{
+    background-color: lightyellow;
+}
+button.remove{
+    background-color: darkred;
+}
+
+.details-modal{
+    position: fixed;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 80vh;
+    width: 50%;
+    left: 150%;
+    top: 20px;
+    transition: .2s ease-in-out;
+    overflow-y: scroll;
+    border-bottom:5px solid black;
+    border-radius: .2em;
+    padding-left:10px;
+    z-index: 1;
+
+}
+
+.details-modal p{
+    padding: 0 20px;
+}
+
+.open{
+    left:50%;
+}
+
+.details-modal h4{
+    text-transform: capitalize;
+}
+
+.details-modal p{
+    text-align: left;
+}
+
+.details-modal .close-btn{
+    align-self:flex-end ;
+    margin: 0;
+    border: 0;
+}
+
+.rating button,h6{
+    display: inline-block;
+    float: none;
+}
+
+table{
+    text-transform: capitalize;
+    border: 1px solid pink;
+    margin: 20px 0px;
+    width: 580px;
+}
+
+th{
+    max-width: 100px;
+    /* overflow: hidden; */
+}
+
+table select{
+    width: 95%;
+    overflow: hidden;
+}
+
+
+.details-modal form{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: deeppink;
+}
+
+.details-modal input{
+    /* display: block; */
+    margin: 5px;
+    padding: 5px;
+    width: 70%;
+}
+
+.details-modal input[name=price]{
+    text-align: center;
+}
+
+.hide{
+    display: none;
+}
+
+
+@media screen and (max-width: 700px) {
+    table {
+      width: 95vw;
+    }
+    td {
+        max-width: 8.1vw;
+        white-space: nowrap;
+        overflow: hidden;
+        } 
+    th{
+        max-width: 0.1%;
+        overflow: hidden;
+    }
+
+    table button{
+        overflow: hidden;
+        width: 95%;
+    }
+    table select{
+        width: 95%;
+        overflow: hidden;
+    }
+
+    .books-cards-container{
+        flex-direction: column;
+        margin: 100px;
+        justify-content: center;
+        align-items: center;
+    }
+    html,body{
+        display: flex;
+        flex-flow: row wrap;
+    }
+  }
