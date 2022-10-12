@@ -54,10 +54,10 @@ function _updateGId() {
     gId = loadFromStorage('idDB')
 }
 
-function _createBook(name = makeLorem(2), price = getRandomIntInclusive(10, 20), image = getRandomIntInclusive(1, 15)) {
+function _createBook(name = makeLorem(2), price = getRandomIntInclusive(10, 20)) {
     gId++
     saveToStorage('idDB', gId)
-    return { id: gId, name, price, details: makeLorem(), rating: 0, image }
+    return { id: gId, name, price, details: makeLorem(), rating: 0, image:getRandomIntInclusive(1,15) }
 }
 
 function addBook(name, price) {

@@ -13,6 +13,32 @@ header {
   height: 400px;
 }
 
+@keyframes myAnim {
+	0% {
+		transform: translate(0,0);
+    
+	}
+  25%{
+    transform: translate(-50%,25%);
+  }
+  
+  50%{
+    transform: translate(0,50%);
+  }
+  75%{
+    transform: translate(50%,25%);
+  }
+	100% {
+    transform: translate(0,0);
+	}
+}
+
+img{
+  animation: myAnim 2s linear 2s infinite normal forwards;
+  transition:all 2s ease
+  
+}
+
 footer {
   background-color: black;
   text-align: center;
@@ -75,3 +101,5 @@ header h1 {
   width: 250px;
   color: white;
 }
+
+
