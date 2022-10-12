@@ -3,11 +3,9 @@
 $(init)
 
 function init() {
-    console.log('Starting up');
     createProjs()
     renderPortfolio()
     $('#contact-form button').click(onSubmit)
-    console.log($('#contact-form'));
 }
 
 function renderPortfolio() {
@@ -40,6 +38,7 @@ function renderModal() {
     const projId = this.getAttribute('data-id')
     const proj = getProjById(projId)
     const date = new Date(proj.publishedAt)
+    console.log(date);
     const strHtml =
         `
 <div class="modal-dialog">

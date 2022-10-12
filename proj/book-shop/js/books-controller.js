@@ -37,7 +37,7 @@ function renderBooks() {
             `
             <div class="book">
                 <div class="description">${book.name}, $${book.price}</div>
-                <img src="./img/book-pictures/${book.image}.jfif" alt="book img"/>
+                <img src="img/book-pictures/${book.image}.jfif" alt="book img"/>
                 <div class="book-actions"><button class="read" onclick="onReadBook(${book.id})">Read</button>
                 <button class="update" onclick="onUpdateBook(${book.id})">Update</button>
                 <button class="remove" onclick="onRemoveBook(${book.id})">X</button> </div>
