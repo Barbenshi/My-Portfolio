@@ -37,6 +37,7 @@ function renderPortfolio() {
 function renderModal() {
     const projId = this.getAttribute('data-id')
     const proj = getProjById(projId)
+    const date = new Date(proj.publishedAt)
     const strHtml =
         `
 <div class="modal-dialog">
@@ -59,7 +60,7 @@ function renderModal() {
           <button class="btn mb-1 btn-xl bg-info">Check me out!</button>
           </a>
           <ul class="list-inline">
-            <li>Date of creation: ${proj.publishedAt.getMonth() + 1}/${proj.publishedAt.getFullYear()}</li>
+            <li>Date of creation: ${date.getMonth() + 1}/${date.getFullYear()}</li>
             <li>Client: Threads</li>
             <li>Category: Illustration</li>
           </ul>
