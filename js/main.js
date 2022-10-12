@@ -56,7 +56,7 @@ function renderModal() {
           <!-- Project Details Go Here -->
           <h2>${proj.name}</h2>
           <p class="item-intro text-muted">${proj.title}</p>
-          <img class="img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg" alt="">
+          <img class="img-fluid d-block mx-auto" src="img/portfolio/${proj.id}.jpg" alt="">
           <p>${proj.desc}</p>
           <a href="${proj.url}">
           <button class="btn mb-1 btn-xl bg-info">Check me out!</button>
@@ -81,10 +81,19 @@ function renderModal() {
 }
 
 function onSubmit(ev) {
-    const email = $('#email').val()
-    const subject = $('#subject').val()
-    const body = $('#body').val()
+    const $elEmail = $('#email')
+    const $elSubject = $('#subject')
+    const $elBody = $('#body')
+
+    const email = $elEmail.val().trim()
+    const subject = $elSubject.val().trim()
+    const body = $elBody.val().trim()
+    if (!email || !subject || !body) return
 
     const url = `https://mail.google.com/mail/?view=cm&fs=1&to=barbenshimol2@gmail.com&su=${subject}&body=${email}, ${body}`
     window.open(url, '_blank')
+    
+    $elEmail.val('')
+    $elSubject.val('')
+    $elBody.val('')
 }

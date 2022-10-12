@@ -9,6 +9,10 @@ function createProjs() {
         gProjs.push(_createProj('Ball-Board'))
         gProjs.push(_createProj('Chess'))
         gProjs.push(_createProj('Mine-Sweeper'))
+        gProjs.push(_createProj('Book-Shop'))
+        gProjs.push(_createProj('Guess-Me'))
+        gProjs.push(_createProj('Pacman'))
+        gProjs.push(_createProj('Touch-Nums'))
         _saveProjsToStorage()
     }
 }
