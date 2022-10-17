@@ -24,7 +24,7 @@ function _createProj(name, title,date, desc = makeLorem()) {
         title,
         publishedAt: new Date(date).getTime(),
         desc,
-        url: `proj/${name.toLowerCase()}/index.html`,
+        url: `https://barbenshi.github.io/${name}/`,
         labels: ["Matrixes", "keyboard events"],
     }
 }

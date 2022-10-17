@@ -24,6 +24,9 @@
   <!-- Custom styles for this template -->
   <link href="css/ca-gallery.css" rel="stylesheet">
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+
 </head>
 
 <body id="page-top">
@@ -33,23 +36,24 @@
   <aside class="offcanvas-aside justify-content-center align-items-start p-1 bg-dark">
     <h4>Contact Me 📩</h4>
     <!-- Contact -->
-   <form  id="contact-form">
+    <form id="contact-form">
 
-       <label for="email" class="form-label text-primary">Email address</label>
-       <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Dudu123@gmail.com for example...">
-       <div id="emailHelp" class="form-text text-secondary badge">We'll never share your email with anyone else.</div>
+      <label for="email" class="form-label text-primary">Email address</label>
+      <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+        placeholder="Dudu123@gmail.com for example...">
+      <div id="emailHelp" class="form-text text-secondary badge">We'll never share your email with anyone else.</div>
 
- 
-        <label for="subject" class="form-text text-primary">Subject</label>
-        <input type="text" class="form-control" id="subject">
 
- 
-        <label for="body" class="form-text text-primary">Message Body</label>
-        <textarea id="body" rows="4" cols="50"></textarea>
+      <label for="subject" class="form-text text-primary">Subject</label>
+      <input type="text" class="form-control" id="subject">
 
-        <button type="button" class="btn btn-primary mt-3">Submit</button>
-    </form> 
-      
+
+      <label for="body" class="form-text text-primary">Message Body</label>
+      <textarea id="body" rows="4" cols="50"></textarea>
+
+      <button type="button" class="btn btn-primary mt-3">Submit</button>
+    </form>
+
     <!-- <section>
       <form class="d-flex flex-column flex-align-start">
         <label for="email">Your E-Mail</label>
@@ -118,32 +122,39 @@
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
             <i class="fa fa-circle fa-stack-2x text-primary"></i>
-            <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+            <i class="fa fa-stack-1x fa-inverse">
+              <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+              <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_cmefnu1y.json"  background="transparent"  speed="0.5"   loop  autoplay></lottie-player>
+            </i>
           </span>
-          <h4 class="service-heading">E-Commerce</h4>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto
-            quo inventore harum ex
-            magni, dicta impedit.</p>
+          <h4 class="service-heading">Translation</h4>
+          <p class="text-muted">Translation of content Italian-Hebrew-English</p>
         </div>
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
             <i class="fa fa-circle fa-stack-2x text-primary"></i>
-            <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+            <i class="fa  fa-stack-1x fa-inverse">
+              <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets6.lottiefiles.com/packages/lf20_omnDaN.json"  background="transparent"  speed="1"  loop  autoplay></lottie-player>
+            </i>
           </span>
           <h4 class="service-heading">Responsive Design</h4>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto
-            quo inventore harum ex
-            magni, dicta impedit.</p>
+          <p class="text-muted">Designing your website to fit best all types of devices for
+            a maximum user experience
+          </p>
         </div>
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
             <i class="fa fa-circle fa-stack-2x text-primary"></i>
-            <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+            <i class="fa fa-stack-1x fa-inverse">
+              <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+              <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_96cnyxkh.json"  background="transparent"  speed="1" loop autoplay></lottie-player>
+            </i>
           </span>
           <h4 class="service-heading">Web Security</h4>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto
-            quo inventore harum ex
-            magni, dicta impedit.</p>
+          <p class="text-muted">Providing end to end security to protect the users and yours data 
+            so you and users can feel free to share all content without any third parties looking at their data
+          </p>
         </div>
       </div>
     </div>
@@ -155,7 +166,7 @@
       <div class="row">
         <div class="col-lg-12 text-center">
           <h2 class="section-heading">Portfolio</h2>
-          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+          <h3 class="section-subheading text-muted">Some of my works over the year</h3>
         </div>
       </div>
       <div class="row" id="port-items">
@@ -204,9 +215,9 @@
   <footer id="contact">
     <div class="container">
       <div class="row">
-        <div class="col-md-4 flex-align-center">
-          <a href="http://coding-academy.org" target="_blank">
-            <img src="./img/ca-logo.png" alt="">
+        <div class="col-md-4 flex-align-center mb-1">
+          <a href="https://www.adultswim.com/streams/rick-and-morty" target="_blank">
+            <img style="width: 200px; border-radius:2em;" src="./img/rick-morty.gif" alt="">
           </a>
         </div>
         <div class="col-md-4 flex-align-center">
@@ -217,7 +228,7 @@
               </a>
             </li>
             <li class="list-inline-item flex-align-center">
-              <a href="#">
+              <a href="https://www.facebook.com/bar.b.shimol/" target="_blank">
                 <i class="fa fa-facebook"></i>
               </a>
             </li>

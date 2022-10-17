@@ -12,16 +12,16 @@ function renderPortfolio() {
     const projs = getProjs()
     const strHtmls = projs.map(proj =>
         `
-    <div class="col-md-4 col-sm-6 portfolio-item" >
-    <a class="portfolio-link" data-toggle="modal" data-id="${proj.id}" href="#portfolioModal">
-      <div class="portfolio-hover">
+    <div class="col-md-4 col-sm-6 portfolio-item d-flex flex-column">
+    <a class="portfolio-link w-100" data-toggle="modal" data-id="${proj.id}" href="#portfolioModal">
+      <div class="portfolio-hover w-100">
         <div class="portfolio-hover-content">
           <i class="fa fa-plus fa-3x"></i>
         </div>
       </div>
-      <img class="img-fluid" src="img/portfolio/${proj.id}.jpg" alt="">
+      <img class="img-fluid w-100" src="img/portfolio/${proj.id}.jpg" style="height:260px" alt="">
     </a>
-    <div class="portfolio-caption">
+    <div class="portfolio-caption" style="flex-grow:1; width:100%;">
       <h4>${proj.name}</h4>
       <p class="text-muted">${proj.title}</p>
     </div>
