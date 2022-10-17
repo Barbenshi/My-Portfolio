@@ -1,7 +1,7 @@
 'use strict'
 
 $(init)
-
+// {/* <i class="fa fa-plus fa-3x"></i> */}
 function init() {
     createProjs()
     renderPortfolio()
@@ -16,12 +16,13 @@ function renderPortfolio() {
     <a class="portfolio-link w-100" data-toggle="modal" data-id="${proj.id}" href="#portfolioModal">
       <div class="portfolio-hover w-100">
         <div class="portfolio-hover-content">
-          <i class="fa fa-plus fa-3x"></i>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_HW7ZtQ.json"  background="transparent"  speed="1" style="height:150px"  loop  autoplay></lottie-player>
         </div>
       </div>
       <img class="img-fluid w-100" src="img/portfolio/${proj.id}.jpg" style="height:260px" alt="">
     </a>
-    <div class="portfolio-caption" style="flex-grow:1; width:100%;">
+    <div class="portfolio-caption rounded-bottom" style="flex-grow:1; width:100%;">
       <h4>${proj.name}</h4>
       <p class="text-muted">${proj.title}</p>
     </div>
