@@ -16,7 +16,6 @@ function renderPortfolio() {
     <a class="portfolio-link w-100" data-toggle="modal" data-id="${proj.id}" href="#portfolioModal">
       <div class="portfolio-hover w-100">
         <div class="portfolio-hover-content">
-        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
         <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_HW7ZtQ.json"  background="transparent"  speed="1" style="height:150px"  loop  autoplay></lottie-player>
         </div>
       </div>
@@ -90,7 +89,7 @@ function onSubmit(ev) {
     const body = $elBody.val().trim()
     if (!email || !subject || !body) return
 
-    const url = `https://mail.google.com/mail/?view=cm&fs=1&to=barbenshimol2@gmail.com&su=${subject}&body=${email}, ${body}`
+    const url = `https://mail.google.com/mail/?view=cm&fs=1&to=barbenshimol2@gmail.com&su=${subject}&body=${body}`
     window.open(url, '_blank')
     
     $elEmail.val('')

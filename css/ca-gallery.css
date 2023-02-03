@@ -790,3 +790,7 @@ textarea {
   .me{
     background-color: tan;
   }
+
+  img{
+    object-fit: cover;
+  }
